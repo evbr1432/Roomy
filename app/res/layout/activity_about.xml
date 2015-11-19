@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/aboutText"
+        android:layout_gravity="center_horizontal"
+        android:text="Ever needed something to help find roomates, here is your answer. Need to see if someone is going to be a good roommate, find their profile on Roomy. What to know how you were rated as a roomate, check the reviews about you. Now there will be no more mystery in finding roommates, get started with Roomy Today!"
+        android:textSize="25dp" />
+</LinearLayout>
