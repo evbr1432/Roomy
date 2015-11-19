@@ -4,6 +4,7 @@
     <string name="parse_app_id">CUPMscJteJMEONwzHQ8aNRNrMS66KN1oGH9L21nI</string>
     <string name="parse_client_key">bc18UrCvJ3vP9iPxFBrDrKH5F8QzsWvnINMydNHq</string>
     <string name="facebook_app_id">438025619742001</string>
+    <color name="blue">#51eeff</color>
 
     <string name="com_parse_ui_logo_content_description">Logo</string>
     <string name="com_parse_ui_progress_dialog_text">Loading...</string>
@@ -77,4 +78,7 @@
     <string name="password_error">Enter password</string>
     <string name="success_message">You\'ve Successfully Logged In!!</string>
     <string name="main">Main</string>
+    <string name="about_Button">About</string>
+    <string name="aboutButton">About</string>
+    <string name="contactText">Contact Us</string>
 </resources>
