@@ -43,4 +43,20 @@
             android:text="@string/signup"
             android:layout_below="@+id/login_button"/>
     </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true">
+
+        <Button
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:text="@string/aboutButton"
+            android:id="@+id/aboutButton"
+            android:layout_row="1"
+            android:layout_column="0" />
+    </GridLayout>
+
 </LinearLayout>
