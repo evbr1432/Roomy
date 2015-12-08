@@ -17,6 +17,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.example.hunter.roomy.R;
+import com.facebook.login.LoginManager;
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -35,13 +36,13 @@ public class ExampleUnitTest {
  * WITH HARDCODED USERS.
 
 @RunWith(MockitoJUnitRunner.class)
-public class LoginPresenterTest {
+public class LoginFragmentTest {
     @Mock
-    private LoginView view;
+    private com.example.hunter.roomy.LoginFragment view;
     @Mock
 
-    private LoginService service;
-    private LoginPresenter presenter;
+    private com.example.hunter.roomy.LoginFragment service;
+    private LoginManager presenter;
 
     @Before
     public void setUp() throws Exception {
