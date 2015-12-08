@@ -20,7 +20,9 @@
  */
 
 package com.example.hunter.roomy;
-
+/**
+ * Created by parse. Runs through their database to obtain username and stored data
+ */
 public interface OnLoginSuccessListener {
   public void onLoginSuccess();
 }

@@ -12,13 +12,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.parse.ParseUser;
-
+/**
+ * Starts login activity and starts main profile activity when login is a success
+ *
+ */
 public class MainActivity extends AppCompatActivity implements OnLoginSuccessListener {
 
     private static final int LOGIN_REQUEST = 0;
 
     private Fragment profileFragment;
-
+    /**
+     * Starts snackbar and action bars. Also creates with old instance state. Also uses parse to check if username and
+     * password are in database
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,19 +56,22 @@ public class MainActivity extends AppCompatActivity implements OnLoginSuccessLis
                     .commit();
         }
     }
-
+    /**
+     * Inflate the menu; this adds items to the action bar if it is present.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_log_in_page, menu);
         return true;
     }
-
+    /**
+     * Handle action bar item clicks here. The action bar will
+     * automatically handle clicks on the Home/Up button, so long
+     * as you specify a parent activity in AndroidManifest.xml.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -74,18 +84,21 @@ public class MainActivity extends AppCompatActivity implements OnLoginSuccessLis
 
         return super.onOptionsItemSelected(item);
     }
-
+    /**
+     * Ensures login on start
+     */
     @Override
     protected void onStart() {
         super.onStart();
         ensureLogin();
     }
-
+    /**
+     * Check which request we're responding to
+     * Make sure the request was successful
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // Check which request we're responding to
         if (requestCode == LOGIN_REQUEST) {
-            // Make sure the request was successful
             if (resultCode == RESULT_OK) {
                 ensureLogin();
             } else {
@@ -109,7 +122,10 @@ public class MainActivity extends AppCompatActivity implements OnLoginSuccessLis
                 .show(loginFragment)
                 .commit();
     }
-
+    /**
+     *
+     * Successful login results in profile fragment createing a new window with username welcome
+     */
     @Override
     public void onLoginSuccess() {
         profileFragment = ProfileFragment.newInstance(ParseUser.getCurrentUser().getUsername());

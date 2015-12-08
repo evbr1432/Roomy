@@ -16,7 +16,7 @@ import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 /**
- * Fragment for the user login screen.
+ * Fragment for the user login screen. Creates new instance of login screen.
  */
 public class LoginFragment extends Fragment {
 
@@ -25,16 +25,25 @@ public class LoginFragment extends Fragment {
   private EditText username;
   private EditText password;
   private ParseUser user;
-
+  /**
+   * Creates new instance
+   *
+   */
   public static LoginFragment newInstance() {
     return new LoginFragment();
   }
-
+  /**
+   * Accesses last instance state so if user already logged in
+   *
+   */
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
   }
-
+  /**
+   * Starts login activity and asks user to try again if failed. Also access sign up activity
+   *
+   */
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                            Bundle savedInstanceState) {
