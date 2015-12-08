@@ -5,11 +5,15 @@ import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
-
+/**
+ * Initializes parse. Uses free key. uses facebook login.
+ */
 public class ParseApplication extends Application {
 
   public ParseUser user;
-
+  /**
+   * On create use api key, enables local data store and uses facebook login.
+   */
   @Override
   public void onCreate() {
     super.onCreate();

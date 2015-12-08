@@ -11,6 +11,7 @@ import com.parse.ParseUser;
 
 /**
  * Created by elijahstaple on 11/12/15.
+ * Main profile view
  */
 public class ProfileFragment extends Fragment {
 
@@ -21,12 +22,17 @@ public class ProfileFragment extends Fragment {
         f.username = name;
         return f;
     }
-
+    /**
+     * On creation of profile fragment, checks any saved instance states
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
+    /**
+     * On profile view uses layout from xml, sets background color, and shows welcom message
+     * with a succesful login.
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                              Bundle savedInstanceState) {
